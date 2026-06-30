@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-950 text-gray-200 antialiased;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-white;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply text-xs font-semibold uppercase tracking-[0.2em] text-accent-light;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white transition hover:bg-accent-light focus:outline-none focus:ring-2 focus:ring-accent/50 focus:ring-offset-2 focus:ring-offset-ink-950;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/15 px-6 py-3 text-sm font-semibold text-gray-200 transition hover:border-white/30 hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-ink-950;
+  }
+
+  .nav-link {
+    @apply text-sm text-gray-400 transition hover:text-white;
+  }
+
+  .skill-pill {
+    @apply rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300;
+  }
+
+  .project-card {
+    @apply glass-card overflow-hidden transition hover:border-accent/40 hover:bg-white/[0.07];
+  }
+
+  .form-input {
+    @apply w-full rounded-xl border border-white/10 bg-ink-900 px-4 py-3 text-sm text-white placeholder-gray-500 outline-none transition focus:border-accent/50 focus:ring-2 focus:ring-accent/20;
+  }
+
+  .star-btn {
+    @apply text-2xl text-gray-600 transition hover:scale-110 hover:text-amber-400;
+  }
+
+  .star-btn.active {
+    @apply text-amber-400;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-white via-accent-glow to-accent-light bg-clip-text text-transparent;
+  }
+
+  .hero-glow {
+    background: radial-gradient(ellipse 60% 50% at 50% -10%, rgba(99, 102, 241, 0.25), transparent);
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.toast-enter {
+  animation: toastIn 0.35s ease forwards;
+}
+
+.toast-exit {
+  animation: toastOut 0.35s ease forwards;
+}
+
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toastOut {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+}

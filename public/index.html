@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Shreyash — Developer portfolio showcasing projects, skills, and visitor feedback."
+    />
+    <title>Shreyash | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body class="font-sans">
+    <div
+      id="toast"
+      class="pointer-events-none fixed bottom-6 right-6 z-50 hidden max-w-sm rounded-xl border px-5 py-4 shadow-2xl"
+      role="status"
+      aria-live="polite"
+    ></div>
+
+    <header
+      id="navbar"
+      class="fixed inset-x-0 top-0 z-40 border-b border-transparent transition-all duration-300"
+    >
+      <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <a href="#home" class="font-display text-lg font-bold tracking-tight text-white">
+          S<span class="text-accent-light">.</span>
+        </a>
+        <ul class="hidden items-center gap-8 md:flex">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#feedback" class="nav-link">Feedback</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#feedback" class="btn-primary hidden text-xs md:inline-flex">Leave Feedback</a>
+        <button
+          id="menu-toggle"
+          class="rounded-lg p-2 text-gray-300 hover:bg-white/5 md:hidden"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path id="menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-ink-950/95 backdrop-blur-md md:hidden">
+        <div class="flex flex-col gap-1 px-6 py-4">
+          <a href="#about" class="mobile-nav-link rounded-lg px-3 py-2 text-gray-300 hover:bg-white/5">About</a>
+          <a href="#skills" class="mobile-nav-link rounded-lg px-3 py-2 text-gray-300 hover:bg-white/5">Skills</a>
+          <a href="#projects" class="mobile-nav-link rounded-lg px-3 py-2 text-gray-300 hover:bg-white/5">Projects</a>
+          <a href="#feedback" class="mobile-nav-link rounded-lg px-3 py-2 text-gray-300 hover:bg-white/5">Feedback</a>
+          <a href="#contact" class="mobile-nav-link rounded-lg px-3 py-2 text-gray-300 hover:bg-white/5">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero-glow relative flex min-h-screen items-center pt-20">
+        <div class="pointer-events-none absolute inset-0 overflow-hidden">
+          <div class="absolute -right-32 top-20 h-72 w-72 rounded-full bg-accent/10 blur-3xl animate-pulse-glow"></div>
+          <div class="absolute -left-20 bottom-20 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl animate-pulse-glow"></div>
+        </div>
+        <div class="relative mx-auto grid max-w-6xl gap-12 px-6 py-20 lg:grid-cols-2 lg:items-center">
+          <div class="reveal">
+            <p class="section-label mb-4">Hello, I'm</p>
+            <h1 class="font-display text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+              Shreyash
+            </h1>
+            <p class="mt-4 text-2xl font-medium text-gradient sm:text-3xl">
+              Full-Stack Developer
+            </p>
+            <p class="mt-6 max-w-lg text-lg leading-relaxed text-gray-400">
+              I build fast, accessible web experiences with clean code and thoughtful design.
+              Explore my work below — and let me know what you think.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="#projects" class="btn-primary">View Projects</a>
+              <a href="#feedback" class="btn-ghost">Share Feedback</a>
+            </div>
+            <div class="mt-12 flex items-center gap-6">
+              <a
+                href="https://github.com/shreyash0107-web"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-400 transition hover:text-white"
+                aria-label="GitHub"
+              >
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-3.795-.735-.405-1.02-1.005-1.395-1.665-1.395-1.125 0-2.295.855-2.295 2.55 0 1.575.855 2.925 2.205 3.615.21.09.405.315.465.585.045.18.03.375-.015.57-.045.225-.15.285-.345.18-1.275-.585-2.07-2.385-2.07-3.855 0-2.85 2.055-5.475 5.925-5.475 3.135 0 5.205 2.25 5.205 5.205 0 3.15-1.395 5.775-3.465 5.775-.675 0-1.305-.345-1.515-.75 0 0-.345.915-.435 1.155-.165.435-.495.975-.735 1.245 1.095.33 2.25.495 3.465.495 6.63 0 12-5.37 12-12S18.63 0 12 0z"/></svg>
+              </a>
+              <a
+                href="mailto:hello@example.com"
+                class="text-gray-400 transition hover:text-white"
+                aria-label="Email"
+              >
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="reveal flex justify-center lg:justify-end">
+            <div class="relative">
+              <div class="absolute -inset-4 rounded-3xl bg-gradient-to-br from-accent/30 to-indigo-600/20 blur-2xl"></div>
+              <div class="glass-card relative p-8 sm:p-10">
+                <div class="mb-6 flex items-center gap-3">
+                  <div class="h-3 w-3 rounded-full bg-red-400"></div>
+                  <div class="h-3 w-3 rounded-full bg-yellow-400"></div>
+                  <div class="h-3 w-3 rounded-full bg-green-400"></div>
+                </div>
+                <pre class="overflow-x-auto font-mono text-sm leading-relaxed text-gray-300"><code><span class="text-accent-light">const</span> developer = {
+  name: <span class="text-emerald-400">"Shreyash"</span>,
+  role: <span class="text-emerald-400">"Full-Stack Dev"</span>,
+  loves: [<span class="text-emerald-400">"React"</span>, <span class="text-emerald-400">"Node"</span>, <span class="text-emerald-400">"UI/UX"</span>],
+  openToWork: <span class="text-amber-400">true</span>
+};</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal mb-12">
+            <p class="section-label mb-3">About Me</p>
+            <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Building things that matter</h2>
+          </div>
+          <div class="reveal grid gap-8 lg:grid-cols-3">
+            <div class="glass-card p-8 lg:col-span-2">
+              <p class="text-lg leading-relaxed text-gray-400">
+                I'm a passionate developer focused on creating responsive, user-centered web applications.
+                From frontend interfaces to backend APIs, I enjoy solving real problems with elegant solutions.
+              </p>
+              <p class="mt-4 text-lg leading-relaxed text-gray-400">
+                When I'm not coding, I'm exploring new technologies, contributing to open source,
+                and refining my craft one project at a time.
+              </p>
+            </div>
+            <div class="glass-card flex flex-col justify-center p-8 text-center">
+              <p class="font-display text-5xl font-bold text-accent-light">3+</p>
+              <p class="mt-2 text-sm text-gray-400">Years of Experience</p>
+              <div class="my-6 h-px bg-white/10"></div>
+              <p class="font-display text-5xl font-bold text-accent-light">15+</p>
+              <p class="mt-2 text-sm text-gray-400">Projects Completed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="border-y border-white/5 bg-ink-900/50 py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal mb-12 text-center">
+            <p class="section-label mb-3">Skills</p>
+            <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Technologies I work with</h2>
+          </div>
+          <div class="reveal flex flex-wrap justify-center gap-3">
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">TypeScript</span>
+            <span class="skill-pill">React</span>
+            <span class="skill-pill">Node.js</span>
+            <span class="skill-pill">Express</span>
+            <span class="skill-pill">Tailwind CSS</span>
+            <span class="skill-pill">HTML & CSS</span>
+            <span class="skill-pill">Git & GitHub</span>
+            <span class="skill-pill">REST APIs</span>
+            <span class="skill-pill">MongoDB</span>
+            <span class="skill-pill">PostgreSQL</span>
+            <span class="skill-pill">Responsive Design</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal mb-12">
+            <p class="section-label mb-3">Projects</p>
+            <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Selected work</h2>
+          </div>
+          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article class="project-card reveal">
+              <div class="h-40 bg-gradient-to-br from-accent/30 to-indigo-900/50"></div>
+              <div class="p-6">
+                <h3 class="font-display text-lg font-semibold text-white">TaskFlow App</h3>
+                <p class="mt-2 text-sm leading-relaxed text-gray-400">
+                  A collaborative task manager with real-time updates, drag-and-drop boards, and team dashboards.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-400">React</span>
+                  <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-400">Node.js</span>
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="h-40 bg-gradient-to-br from-emerald-500/20 to-teal-900/50"></div>
+              <div class="p-6">
+                <h3 class="font-display text-lg font-semibold text-white">WeatherNow</h3>
+                <p class="mt-2 text-sm leading-relaxed text-gray-400">
+                  Location-based weather app with 7-day forecasts, animated icons, and offline support.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-400">JavaScript</span>
+                  <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-400">API</span>
+                </div>
+              </div>
+            </article>
+            <article class="project-card reveal">
+              <div class="h-40 bg-gradient-to-br from-rose-500/20 to-purple-900/50"></div>
+              <div class="p-6">
+                <h3 class="font-display text-lg font-semibold text-white">DevBlog CMS</h3>
+                <p class="mt-2 text-sm leading-relaxed text-gray-400">
+                  A markdown-powered blog platform with admin panel, SEO optimization, and comment system.
+                </p>
+                <div class="mt-4 flex flex-wrap gap-2">
+                  <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-400">Next.js</span>
+                  <span class="rounded-md bg-white/5 px-2 py-1 text-xs text-gray-400">MongoDB</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="feedback" class="border-t border-white/5 bg-ink-900/50 py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal mb-12 text-center">
+            <p class="section-label mb-3">Your Voice Matters</p>
+            <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Share your feedback</h2>
+            <p class="mx-auto mt-4 max-w-xl text-gray-400">
+              Visited my portfolio? I'd love to hear from you. Rate your experience and leave a message — it helps me improve.
+            </p>
+          </div>
+
+          <div class="grid gap-10 lg:grid-cols-2">
+            <form id="feedback-form" class="reveal glass-card p-8" novalidate>
+              <div class="space-y-5">
+                <div>
+                  <label for="name" class="mb-2 block text-sm font-medium text-gray-300">Your Name</label>
+                  <input type="text" id="name" name="name" class="form-input" placeholder="Jane Doe" required minlength="2" />
+                </div>
+                <div>
+                  <label for="email" class="mb-2 block text-sm font-medium text-gray-300">Email</label>
+                  <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+                </div>
+                <div>
+                  <label class="mb-2 block text-sm font-medium text-gray-300">Rating</label>
+                  <div id="star-rating" class="flex gap-1" role="radiogroup" aria-label="Rating">
+                    <button type="button" class="star-btn" data-value="1" aria-label="1 star">★</button>
+                    <button type="button" class="star-btn" data-value="2" aria-label="2 stars">★</button>
+                    <button type="button" class="star-btn" data-value="3" aria-label="3 stars">★</button>
+                    <button type="button" class="star-btn" data-value="4" aria-label="4 stars">★</button>
+                    <button type="button" class="star-btn" data-value="5" aria-label="5 stars">★</button>
+                  </div>
+                  <input type="hidden" id="rating" name="rating" value="" />
+                  <p id="rating-label" class="mt-1 text-xs text-gray-500">Click to rate</p>
+                </div>
+                <div>
+                  <label for="message" class="mb-2 block text-sm font-medium text-gray-300">Your Feedback</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="4"
+                    class="form-input resize-none"
+                    placeholder="What did you think of this portfolio?"
+                    required
+                    minlength="10"
+                  ></textarea>
+                </div>
+                <button type="submit" id="submit-btn" class="btn-primary w-full">
+                  Submit Feedback
+                </button>
+              </div>
+            </form>
+
+            <div class="reveal">
+              <h3 class="mb-6 font-display text-xl font-semibold text-white">Recent Feedback</h3>
+              <div id="feedback-list" class="space-y-4">
+                <div id="feedback-empty" class="glass-card p-8 text-center text-gray-500">
+                  <p>No feedback yet. Be the first to share your thoughts!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal glass-card mx-auto max-w-2xl p-10 text-center">
+            <p class="section-label mb-3">Contact</p>
+            <h2 class="font-display text-3xl font-bold text-white">Let's work together</h2>
+            <p class="mt-4 text-gray-400">
+              Have a project in mind or want to connect? Reach out anytime.
+            </p>
+            <a href="mailto:hello@example.com" class="btn-primary mt-8">Send an Email</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/5 py-8">
+      <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 sm:flex-row">
+        <p class="text-sm text-gray-500">&copy; 2026 Shreyash. All rights reserved.</p>
+        <p class="text-sm text-gray-500">Built with Tailwind CSS & JavaScript</p>
+      </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
