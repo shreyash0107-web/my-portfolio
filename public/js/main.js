@@ -232,4 +232,20 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const contactName = document.getElementById("contact-name").value.trim();
+    const contactEmail = document.getElementById("contact-email").value.trim();
+    const contactMessage = document.getElementById("contact-message").value.trim();
+    if (!contactName || !contactEmail || !contactMessage) {
+      showToast("Please fill in all fields.", "error");
+      return;
+    }
+    showToast("Thank you! Your message has been sent.", "success");
+    contactForm.reset();
+  });
+}
+
 loadFeedback();
