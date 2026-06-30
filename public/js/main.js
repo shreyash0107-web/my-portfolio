@@ -178,10 +178,10 @@ feedbackForm.addEventListener("submit", async (e) => {
   }
 
   const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
+    name: document.getElementById("feedback-name").value,
+    email: document.getElementById("feedback-email").value,
     rating: selectedRating,
-    message: document.getElementById("message").value,
+    message: document.getElementById("feedback-message").value,
   };
 
   submitBtn.disabled = true;
@@ -236,9 +236,9 @@ const contactForm = document.getElementById("contact-form");
 if (contactForm) {
   contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
-    const contactName = document.getElementById("contact-name").value.trim();
-    const contactEmail = document.getElementById("contact-email").value.trim();
-    const contactMessage = document.getElementById("contact-message").value.trim();
+    const contactName = document.getElementById("name").value.trim();
+    const contactEmail = document.getElementById("email").value.trim();
+    const contactMessage = document.getElementById("message").value.trim();
     if (!contactName || !contactEmail || !contactMessage) {
       showToast("Please fill in all fields.", "error");
       return;

@@ -72,7 +72,7 @@
     </header>
 
     <main>
-      <section id="hero-section" class="hero-glow relative flex min-h-screen items-center pt-20">
+      <section id="hero-section" class="hero-glow relative flex min-h-screen items-center justify-center pt-20">
         <div class="pointer-events-none absolute inset-0 overflow-hidden">
           <div class="absolute -right-32 top-20 h-72 w-72 rounded-full bg-accent/10 blur-3xl animate-pulse-glow"></div>
           <div class="absolute -left-20 bottom-20 h-64 w-64 rounded-full bg-indigo-500/10 blur-3xl animate-pulse-glow"></div>
@@ -193,7 +193,7 @@
             <p class="section-label mb-3">Projects</p>
             <h2 class="font-display text-3xl font-bold text-white sm:text-4xl">Selected work</h2>
           </div>
-          <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             <article class="project-card reveal">
               <div class="h-40 overflow-hidden">
                   <img src="TaskFlow.png" class="w-full h-full object-cover" /></div>
@@ -256,12 +256,12 @@
             <form id="feedback-form" class="reveal glass-card p-8" novalidate>
               <div class="space-y-5">
                 <div>
-                  <label for="name" class="mb-2 block text-sm font-medium text-gray-300">Your Name</label>
-                  <input type="text" id="name" name="name" class="form-input" placeholder="Jane Doe" required minlength="2" />
+                  <label for="feedback-name" class="mb-2 block text-sm font-medium text-gray-300">Your Name</label>
+                  <input type="text" id="feedback-name" name="name" class="form-input" placeholder="Jane Doe" required minlength="2" />
                 </div>
                 <div>
-                  <label for="email" class="mb-2 block text-sm font-medium text-gray-300">Email</label>
-                  <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
+                  <label for="feedback-email" class="mb-2 block text-sm font-medium text-gray-300">Email</label>
+                  <input type="email" id="feedback-email" name="email" class="form-input" placeholder="you@example.com" required />
                 </div>
                 <div>
                   <label class="mb-2 block text-sm font-medium text-gray-300">Rating</label>
@@ -276,9 +276,9 @@
                   <p id="rating-label" class="mt-1 text-xs text-gray-500">Click to rate</p>
                 </div>
                 <div>
-                  <label for="message" class="mb-2 block text-sm font-medium text-gray-300">Your Feedback</label>
+                  <label for="feedback-message" class="mb-2 block text-sm font-medium text-gray-300">Your Feedback</label>
                   <textarea
-                    id="message"
+                    id="feedback-message"
                     name="message"
                     rows="4"
                     class="form-input resize-none"
@@ -317,17 +317,17 @@
           <form id="contact-form" class="reveal glass-card mx-auto max-w-xl p-8" novalidate>
             <div class="space-y-5">
               <div>
-                <label for="contact-name" class="mb-2 block text-sm font-medium text-gray-300">Your Name</label>
-                <input type="text" id="contact-name" name="name" class="form-input" placeholder="Jane Doe" required />
+                <label for="name" class="mb-2 block text-sm font-medium text-gray-300">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Jane Doe" required />
               </div>
               <div>
-                <label for="contact-email" class="mb-2 block text-sm font-medium text-gray-300">Email Address</label>
-                <input type="email" id="contact-email" name="email" class="form-input" placeholder="you@example.com" required />
+                <label for="email" class="mb-2 block text-sm font-medium text-gray-300">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required />
               </div>
               <div>
-                <label for="contact-message" class="mb-2 block text-sm font-medium text-gray-300">Message</label>
+                <label for="message" class="mb-2 block text-sm font-medium text-gray-300">Message</label>
                 <textarea
-                  id="contact-message"
+                  id="message"
                   name="message"
                   rows="4"
                   class="form-input resize-none"
